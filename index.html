@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Профессиональный массаж: расслабление, восстановление, забота о теле. Запись онлайн." />
+  <title>Массажист — светлый лендинг</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержимому</a>
+
+  <header class="header" id="top">
+    <div class="container header__row">
+      <a class="brand" href="#top" aria-label="На главную">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Массаж • Светлая студия</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="#services">Услуги</a>
+        <a class="nav__link" href="#practices">Практики</a>
+        <a class="nav__link" href="#articles">Статьи</a>
+        <a class="nav__link" href="#contact">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost" id="whatsappHeader" href="#contact">WhatsApp</a>
+        <a class="btn" href="#contact">Записаться</a>
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile" id="mobileMenu" hidden>
+      <div class="container mobile__inner">
+        <a class="mobile__link" href="#services">Услуги</a>
+        <a class="mobile__link" href="#practices">Практики</a>
+        <a class="mobile__link" href="#articles">Статьи</a>
+        <a class="mobile__link" href="#contact">Контакты</a>
+        <a class="btn btn--wide" href="#contact">Записаться</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="badge">Индивидуальный подход • Без спешки • Комфорт</div>
+          <h1 class="hero__title">Массаж, после которого легче дышится и свободнее движется</h1>
+          <p class="hero__text">
+            Мягко снимаю напряжение, улучшаю восстановление и помогаю телу вернуться в баланс.
+            Подберём технику под вашу задачу: расслабление, восстановление, профилактика.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#contact">Записаться на сеанс</a>
+            <a class="btn btn--ghost" href="#services">Смотреть услуги</a>
+          </div>
+
+          <dl class="kpi">
+            <div class="kpi__item">
+              <dt class="kpi__value">60–90 мин</dt>
+              <dd class="kpi__label">длительность сеанса</dd>
+            </div>
+            <div class="kpi__item">
+              <dt class="kpi__value">С 1-го</dt>
+              <dd class="kpi__label">ощущается эффект</dd>
+            </div>
+            <div class="kpi__item">
+              <dt class="kpi__value">Уютно</dt>
+              <dd class="kpi__label">тихо, чисто, тепло</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__card" aria-label="Картинка">
+          <div class="hero__art" aria-hidden="true"></div>
+          <div class="hero__note">
+            <strong>Перед первым визитом</strong>
+            <span>пара вопросов и короткая диагностика — чтобы выбрать правильную технику.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Преимущества">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Почему это работает</h2>
+          <p class="section__subtitle">Опора на анатомию, бережная техника и понятный план.</p>
+        </div>
+
+        <div class="cards cards--3">
+          <article class="card">
+            <h3 class="card__title">Снимаем спазмы и «зажимы»</h3>
+            <p class="card__text">Работаем с тонусом, триггерными точками и фасциями — мягко и последовательно.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Улучшаем восстановление</h3>
+            <p class="card__text">Помогаем телу быстрее возвращаться в ресурс после спорта, стресса и недосыпа.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Нормализуем самочувствие</h3>
+            <p class="card__text">Лёгкость в спине, подвижность плеч, более глубокий сон и «выдох» нервной системы.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="services">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Услуги</h2>
+          <p class="section__subtitle">Популярные форматы. Стоимость и длительность можно настроить под тебя.</p>
+        </div>
+
+        <div class="cards cards--3">
+          <article class="card card--price">
+            <h3 class="card__title">Классический расслабляющий</h3>
+            <p class="card__text">Для снятия стресса, усталости, улучшения сна и общего тонуса.</p>
+            <div class="price">
+              <span class="price__time">60 мин</span>
+              <span class="price__value">от 000</span>
+            </div>
+          </article>
+
+          <article class="card card--price">
+            <h3 class="card__title">Спина + шея</h3>
+            <p class="card__text">Если много сидите, работаете за компьютером или чувствуется тяжесть в плечах.</p>
+            <div class="price">
+              <span class="price__time">45–60 мин</span>
+              <span class="price__value">от 000</span>
+            </div>
+          </article>
+
+          <article class="card card--price">
+            <h3 class="card__title">Спортивный / восстановительный</h3>
+            <p class="card__text">Подходит после тренировок, для ускорения восстановления и улучшения подвижности.</p>
+            <div class="price">
+              <span class="price__time">60–90 мин</span>
+              <span class="price__value">от 000</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="notice">
+          <div class="notice__icon" aria-hidden="true"></div>
+          <p class="notice__text">
+            Важно: массаж — не диагноз и не замена лечению. При острых состояниях и противопоказаниях лучше заранее обсудить с врачом.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="practices">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Виды массажа и практики</h2>
+          <p class="section__subtitle">Комбинирую техники под задачу, чтобы результат был ощутимым и безопасным.</p>
+        </div>
+
+        <div class="accordion" data-accordion>
+          <details class="acc" open>
+            <summary class="acc__summary">Миофасциальный релиз</summary>
+            <div class="acc__content">
+              Работа с фасциями и участками «скованности» — помогает вернуть эластичность и движение.
+            </div>
+          </details>
+          <details class="acc">
+            <summary class="acc__summary">Триггерные точки</summary>
+            <div class="acc__content">
+              Точечная проработка зон, которые отдают болью в соседние области (например, шея → голова).
+            </div>
+          </details>
+          <details class="acc">
+            <summary class="acc__summary">Лимфодренажные элементы</summary>
+            <div class="acc__content">
+              Мягкие техники для ощущения «лёгкости», улучшения микроциркуляции и снятия отёчности.
+            </div>
+          </details>
+          <details class="acc">
+            <summary class="acc__summary">Релакс-практики</summary>
+            <div class="acc__content">
+              Спокойный темп, дыхание, комфортное давление — чтобы нервная система переключилась в режим отдыха.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="articles">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Небольшие статьи</h2>
+          <p class="section__subtitle">Просто и по делу — что вы почувствуете и почему.</p>
+        </div>
+
+        <div class="cards cards--2">
+          <article class="card">
+            <h3 class="card__title">Как массаж влияет на стресс</h3>
+            <p class="card__text">
+              Умеренное прикосновение и ритмичная работа помогают снижать мышечный тонус, улучшать дыхание и качество сна.
+              Часто эффект ощущается как «выдох» и ясность в голове.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Почему болит шея и что с этим делать</h3>
+            <p class="card__text">
+              Долгое сидение, смартфон, напряжение в плечах — типичные причины. Комбинация массажа, лёгкой мобилизации
+              и простых упражнений дома обычно даёт лучший результат.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Про восстановление после тренировок</h3>
+            <p class="card__text">
+              После нагрузки мышцам нужно питание и «разгрузка». Массаж помогает улучшить ощущения в теле, подвижность и скорость
+              восстановления — особенно в связке с сном и водой.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Сколько нужно сеансов</h3>
+            <p class="card__text">
+              Иногда достаточно 1–2 встреч для снятия острого напряжения. Для устойчивого результата лучше курс:
+              4–8 сеансов с интервалом 5–10 дней, затем поддерживающий режим.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Связаться с нами</h2>
+          <p class="section__subtitle">Напиши в WhatsApp или оставь сообщение — я отвечу и предложу время.</p>
+        </div>
+
+        <div class="contact">
+          <div class="contact__left">
+            <div class="contact__box">
+              <h3 class="contact__title">Быстрая запись</h3>
+              <p class="contact__text">Нажми кнопку — откроется WhatsApp с готовым сообщением.</p>
+              <a class="btn btn--wide" id="whatsappCta" target="_blank" rel="noopener" href="#">Написать в WhatsApp</a>
+              <p class="contact__hint">Номер: <span id="whatsappNumber">+0000000000</span></p>
+            </div>
+
+            <div class="contact__box">
+              <h3 class="contact__title">График</h3>
+              <p class="contact__text">Ежедневно: 10:00–20:00 (по записи)</p>
+              <p class="contact__text">Адрес: ваш город, улица, дом</p>
+            </div>
+          </div>
+
+          <div class="contact__right">
+            <form class="form" id="contactForm" novalidate>
+              <div class="form__row">
+                <label class="field">
+                  <span class="field__label">Имя</span>
+                  <input class="field__input" name="name" autocomplete="name" placeholder="Как к вам обращаться" required />
+                </label>
+                <label class="field">
+                  <span class="field__label">Телефон</span>
+                  <input class="field__input" name="phone" autocomplete="tel" placeholder="+380…" required />
+                </label>
+              </div>
+
+              <label class="field">
+                <span class="field__label">Что беспокоит / какой массаж нужен</span>
+                <textarea class="field__input field__input--area" name="message" placeholder="Например: шея и плечи, напряжение после работы, хочу курс…" required></textarea>
+              </label>
+
+              <div class="form__actions">
+                <button class="btn" type="submit">Отправить</button>
+                <button class="btn btn--ghost" type="button" id="sendToWhatsApp">Отправить в WhatsApp</button>
+              </div>
+
+              <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <p class="footer__text">© <span id="year"></span> Массаж • Светлая студия</p>
+      <a class="footer__link" href="#top">Наверх</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
