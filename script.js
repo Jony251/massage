@@ -200,12 +200,23 @@
   if (intakeForm) {
     intakeForm.addEventListener("submit", (e) => {
       e.preventDefault();
+      const email = intakeForm.querySelector("input[name=email]");
       const wellbeing = intakeForm.querySelector("[name=wellbeing]");
       const acute = intakeForm.querySelector("input[name=acute]:checked");
       const pregnancy = intakeForm.querySelector("input[name=pregnancy]:checked");
       const veins = intakeForm.querySelector("input[name=veins]:checked");
       const skin = intakeForm.querySelector("input[name=skin]:checked");
 
+      if (!(email instanceof HTMLInputElement) || !email.value.trim()) {
+        setIntakeStatus("Введите email для связи. ");
+        email?.focus?.();
+        return;
+      }
+      if (email && !email.checkValidity()) {
+        setIntakeStatus("Введите корректный email. ");
+        email?.focus?.();
+        return;
+      }
       if (!(wellbeing instanceof HTMLSelectElement) || !wellbeing.value) {
         setIntakeStatus("Выберите самочувствие (вопрос 1). ");
         wellbeing?.focus?.();

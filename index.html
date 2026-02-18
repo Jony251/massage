@@ -305,6 +305,17 @@
       <p class="modal__subtitle">Ответы помогут подобрать комфортную и безопасную технику. Можно заполнить за 1–2 минуты.</p>
 
       <form class="form" id="intakeForm" novalidate>
+        <div class="form__row">
+          <label class="field">
+            <span class="field__label">Email (для связи)</span>
+            <input class="field__input" name="email" type="email" autocomplete="email" placeholder="name@example.com" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Телефон (необязательно)</span>
+            <input class="field__input" name="phone" type="tel" autocomplete="tel" placeholder="+380…" />
+          </label>
+        </div>
+
         <label class="field">
           <span class="field__label">1) Какое у вас самочувствие сегодня?</span>
           <select class="field__input" name="wellbeing" required>
