@@ -81,10 +81,10 @@
 
         <div class="hero__card" aria-label="Картинка">
           <div class="hero__art" aria-hidden="true"></div>
-          <div class="hero__note">
+          <button class="hero__note hero__note--btn" type="button" id="openIntake" aria-haspopup="dialog">
             <strong>Перед первым визитом</strong>
             <span>пара вопросов и короткая диагностика — чтобы выбрать правильную технику.</span>
-          </div>
+          </button>
         </div>
       </div>
     </section>
@@ -117,34 +117,31 @@
       <div class="container">
         <div class="section__head">
           <h2 class="section__title">Услуги</h2>
-          <p class="section__subtitle">Популярные форматы. Стоимость и длительность можно настроить под тебя.</p>
+          <p class="section__subtitle">Популярные форматы. Длительность можно настроить под тебя.</p>
         </div>
 
         <div class="cards cards--3">
-          <article class="card card--price">
+          <article class="card">
             <h3 class="card__title">Классический расслабляющий</h3>
             <p class="card__text">Для снятия стресса, усталости, улучшения сна и общего тонуса.</p>
             <div class="price">
               <span class="price__time">60 мин</span>
-              <span class="price__value">от 000</span>
             </div>
           </article>
 
-          <article class="card card--price">
+          <article class="card">
             <h3 class="card__title">Спина + шея</h3>
             <p class="card__text">Если много сидите, работаете за компьютером или чувствуется тяжесть в плечах.</p>
             <div class="price">
               <span class="price__time">45–60 мин</span>
-              <span class="price__value">от 000</span>
             </div>
           </article>
 
-          <article class="card card--price">
+          <article class="card">
             <h3 class="card__title">Спортивный / восстановительный</h3>
             <p class="card__text">Подходит после тренировок, для ускорения восстановления и улучшения подвижности.</p>
             <div class="price">
               <span class="price__time">60–90 мин</span>
-              <span class="price__value">от 000</span>
             </div>
           </article>
         </div>
@@ -297,6 +294,88 @@
       <a class="footer__link" href="#top">Наверх</a>
     </div>
   </footer>
+
+  <div class="modal" id="intakeModal" hidden>
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="intakeTitle">
+      <div class="modal__head">
+        <h2 class="modal__title" id="intakeTitle">Анкета перед массажем</h2>
+        <button class="modal__close" type="button" aria-label="Закрыть" data-close-modal>×</button>
+      </div>
+      <p class="modal__subtitle">Ответы помогут подобрать комфортную и безопасную технику. Можно заполнить за 1–2 минуты.</p>
+
+      <form class="form" id="intakeForm" novalidate>
+        <label class="field">
+          <span class="field__label">1) Какое у вас самочувствие сегодня?</span>
+          <select class="field__input" name="wellbeing" required>
+            <option value="" selected>Выберите</option>
+            <option>Отличное</option>
+            <option>Нормальное</option>
+            <option>Есть усталость / напряжение</option>
+            <option>Есть боль / дискомфорт</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="field__label">2) Где чаще всего беспокоит?</span>
+          <input class="field__input" name="zone" placeholder="Шея, плечи, поясница, ноги…" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">3) Боль сейчас (0–10)</span>
+          <input class="field__input" name="pain" type="number" inputmode="numeric" min="0" max="10" placeholder="0" />
+        </label>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset__legend">4) Есть ли температура, простуда или острое воспаление?</legend>
+          <label class="check"><input type="radio" name="acute" value="Нет" required> Нет</label>
+          <label class="check"><input type="radio" name="acute" value="Да"> Да</label>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset__legend">5) Есть ли беременность?</legend>
+          <label class="check"><input type="radio" name="pregnancy" value="Нет" required> Нет</label>
+          <label class="check"><input type="radio" name="pregnancy" value="Да"> Да</label>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset__legend">6) Давление / сердце</legend>
+          <label class="check"><input type="checkbox" name="cv" value="Повышенное/пониженное давление"> Повышенное/пониженное давление</label>
+          <label class="check"><input type="checkbox" name="cv" value="Заболевания сердца"> Заболевания сердца</label>
+          <label class="check"><input type="checkbox" name="cv" value="Нет"> Нет</label>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset__legend">7) Варикоз / тромбоз в анамнезе?</legend>
+          <label class="check"><input type="radio" name="veins" value="Нет" required> Нет</label>
+          <label class="check"><input type="radio" name="veins" value="Да"> Да</label>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset__legend">8) Кожа (ссадины/сыпь/воспаление) на зоне массажа?</legend>
+          <label class="check"><input type="radio" name="skin" value="Нет" required> Нет</label>
+          <label class="check"><input type="radio" name="skin" value="Да"> Да</label>
+        </fieldset>
+
+        <label class="field">
+          <span class="field__label">9) Травмы / операции за последние 6 месяцев?</span>
+          <input class="field__input" name="injuries" placeholder="Если да — какие и когда" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">10) Что для вас важно по ощущениям?</span>
+          <textarea class="field__input field__input--area" name="preferences" placeholder="Например: мягко, без боли; сильнее на спине; не трогать поясницу…"></textarea>
+        </label>
+
+        <div class="form__actions">
+          <button class="btn" type="submit">Сохранить ответы</button>
+          <button class="btn btn--ghost" type="button" data-close-modal>Закрыть</button>
+        </div>
+
+        <p class="form__status" id="intakeStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
