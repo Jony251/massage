@@ -115,11 +115,11 @@ img{max-width:100%; display:block}
 .hero__card{position:relative; border-radius:26px; background:linear-gradient(180deg, rgba(255,255,255,.9), rgba(255,255,255,.65)); border:1px solid var(--line); box-shadow:var(--shadow); overflow:hidden}
 .hero__art{
   height:340px;
-  background:
-    radial-gradient(240px 240px at 30% 35%, rgba(43,106,255,.22), transparent 60%),
-    radial-gradient(240px 240px at 65% 65%, rgba(138,92,255,.18), transparent 58%),
-    radial-gradient(160px 160px at 80% 20%, rgba(16,185,129,.14), transparent 55%),
-    linear-gradient(135deg, rgba(43,106,255,.10), rgba(138,92,255,.08));
+  background-color:#fff;
+  background-image:url("image.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
 }
 .hero__note{position:absolute; left:18px; right:18px; bottom:18px; padding:14px 14px; background:rgba(255,255,255,.82); border:1px solid var(--line); border-radius:18px; display:grid; gap:4px}
 .hero__note strong{font-weight:900}
