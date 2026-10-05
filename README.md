@@ -1,8 +1,24 @@
-<img width="1443" height="902" alt="image" src="https://github.com/user-attachments/assets/044ced8f-e81d-4744-9f84-8078400f21a1" />
-<img width="1325" height="896" alt="image" src="https://github.com/user-attachments/assets/3b877f4c-7c0d-45e6-8207-722779eb3870" />
-<img width="1306" height="893" alt="image" src="https://github.com/user-attachments/assets/0d959906-67f3-4a49-bd46-021a71ed2a57" />
+# Massage studio landing page
 
-Run locally
+A light, responsive Russian-language landing page for a massage therapist, written in plain HTML, CSS and JavaScript with no framework and no build step. It covers services, massage types, short articles and contacts. Booking happens over WhatsApp: the buttons and the contact form open a chat with a pre-filled message. A "before your first visit" questionnaire opens in an accessible modal (focus moves into the dialog and returns afterwards) and saves the answers in the browser's `localStorage`. The mobile menu supports the Escape key and `aria-expanded`. The WhatsApp number is a placeholder constant at the top of `script.js`, waiting for the real one.
+
+<p align="center">
+  <img src="docs/screenshots/home.webp" alt="Hero section: headline, booking buttons, three short facts and an illustration of a massage session" width="80%">
+</p>
+<p align="center">
+  <img src="docs/screenshots/services.webp" alt="Services section with service cards" width="80%">
+</p>
+
+**Stack:** HTML5 · CSS3 · vanilla JavaScript.
+
+## Run locally
+
+Open `index.html` in a browser, or serve the folder:
+
 ```bash
-    python -m http.server 5173
+python -m http.server 5173     # http://localhost:5173
 ```
+
+## Author
+
+Evgeny Nemchenko, full-stack developer: [bluecat.cc](https://bluecat.cc) · [LinkedIn](https://www.linkedin.com/in/evgeny-nemchenko) · [nevgeny90@gmail.com](mailto:nevgeny90@gmail.com) · [GitHub @Jony251](https://github.com/Jony251)
